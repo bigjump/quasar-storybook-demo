@@ -21,3 +21,5 @@ Storybook and Quasar require different versions of Vite, so we need to manage it
 - Override the Vite & ViteJs plugin in package.json
 - Add vite.config.js
 - Create your first storybook story - eg. DemoCard.stories.ts assuming you have a DemoCard.vue component
+
+![image](https://github.com/user-attachments/assets/f606b323-0aa1-4120-be67-f5c6876fb707)
