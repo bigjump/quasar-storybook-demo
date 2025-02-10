@@ -1,41 +1,23 @@
-# Quasar App (q2)
+# Quasar + Storybook using TS + Vite
 
-A Quasar Project
+In case this helps anyone else trying to set up Quasar + Storybook (using TS)
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+**GITHUB REPO**: https://github.com/bigjump/quasar-storybook-demo
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+- First commit - I just ran npm init quasar
+- Second commit - includes the changes required to get a simple demo working
+  
+### You can see the changes here:
 
+https://github.com/bigjump/quasar-storybook-demo/compare/e8ca641ca8e1665b415d89c08d1a26c820438846..56bf27d47fca198c93dd4e25943b2557eb40c59f#diff-d42715fd3297e575fb61faba39bba1b83739d3fd533a719ccfb0d81f64862b15
 
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
+### In summary:
 
+Storybook and Quasar require different versions of Vite, so we need to manage it seperately. Steps are:
 
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+- Create .storybook folder with preview.ts and main.ts - see Storybook docs about these
+- Add storybook commands to package.json scripts
+- Add storybook dev dependencies into package.json
+- Override the Vite & ViteJs plugin in package.json
+- Add vite.config.js
+- Create your first storybook story - eg. DemoCard.stories.ts assuming you have a DemoCard.vue component
